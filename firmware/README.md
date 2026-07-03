@@ -35,23 +35,23 @@
 
 ### FreeRTOS 任务
 
-* `Control\\\\\\\_Task`
+* `Control\_Task`
 
   * 周期：`10 ms`
   * 功能：执行底盘控制、速度反馈计算和电机输出
-* `RosComm\\\\\\\_Task`
+* `RosComm\_Task`
 
   * 周期：`5 ms`
   * 功能：接收 ROS 速度指令并上报底盘/电池状态
-* `PS2\\\\\\\_Task`
+* `PS2\_Task`
 
   * 周期：`1 ms`
   * 功能：轮询 USB 手柄状态并生成本地控制指令
-* `Battery\\\\\\\_Task`
+* `Battery\_Task`
 
   * 周期：`100 ms`
   * 功能：采样电池电压并更新电池状态
-* `Display\\\\\\\_Task`
+* `Display\_Task`
 
   * 周期：`200 ms`
   * 功能：刷新 OLED 显示内容
@@ -112,9 +112,9 @@ firmware/
 主要内容：
 
 * 帧类型或保留字节
-* `vx\\\\\\\_mps`，类型为 `float`
-* `vy\\\\\\\_mps`，类型为 `float`
-* `wz\\\\\\\_radps`，类型为 `float`
+* `vx\_mps`，类型为 `float`
+* `vy\_mps`，类型为 `float`
+* `wz\_radps`，类型为 `float`
 * XOR 校验
 
 ### 发送状态帧 TX
@@ -123,9 +123,9 @@ firmware/
 
 上报内容：
 
-* `vx\\\\\\\_mps`
-* `vy\\\\\\\_mps`
-* `wz\\\\\\\_radps`
+* `vx\_mps`
+* `vy\_mps`
+* `wz\_radps`
 * 状态标志位
 
 ### 电池上报帧
@@ -182,7 +182,7 @@ PS2/手柄输入通过 USB 模块处理。
 * 电量百分比
 * 低电量标志
 
-注意：当前源码中 `BAT\\\\\\\_STOP\\\\\\\_ENABLE = 0`，即低电自动停车功能默认关闭。
+注意：当前源码中 `BAT\_STOP\_ENABLE = 0`，即低电自动停车功能默认关闭。
 
 ## 安全保护
 
@@ -254,6 +254,4 @@ PS2/手柄输入通过 USB 模块处理。
 * 当前源码中的电池电流上报固定为 `0 mA`
 
 ## License
-
-
 
