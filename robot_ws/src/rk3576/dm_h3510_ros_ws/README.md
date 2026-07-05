@@ -4,12 +4,14 @@
 
 推荐主线是 C++ 版本。Python 版本保留为备用验证版本。
 
+下面的 Windows 命令默认从 RK3576 项目目录执行。
+
 ## 5 分钟跑通
 
 先部署，再构建 C++ 工作区：
 
 ```powershell
-cd D:\Desktop\rk3576\workspace\dm_h3510_ros_ws
+cd .\dm_h3510_ros_ws
 .\scripts\windows\deploy_to_board.ps1
 adb shell "bash /home/lckfb/workspace/dm_h3510_ros_ws/scripts/board/build_cpp_ros.sh"
 ```
@@ -166,7 +168,7 @@ position_loop:
 修改参数后必须重新部署和构建：
 
 ```powershell
-cd D:\Desktop\rk3576\workspace\dm_h3510_ros_ws
+cd .\dm_h3510_ros_ws
 .\scripts\windows\deploy_to_board.ps1
 adb shell "bash /home/lckfb/workspace/dm_h3510_ros_ws/scripts/board/build_cpp_ros.sh"
 ```

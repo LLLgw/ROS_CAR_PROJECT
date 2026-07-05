@@ -70,7 +70,7 @@ motor:
 修改后需要重新部署和构建：
 
 ```powershell
-cd D:\Desktop\rk3576\workspace\dm_h3510_ros_ws
+cd .\dm_h3510_ros_ws
 .\scripts\windows\deploy_to_board.ps1
 adb shell "bash /home/lckfb/workspace/dm_h3510_ros_ws/scripts/board/build_python_ros.sh"
 ```
