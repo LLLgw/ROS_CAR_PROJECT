@@ -32,7 +32,7 @@ xxxxxxxx	device
 ## 1. 部署代码
 
 ```powershell
-cd D:\Desktop\rk3576\workspace\dm_h3510_ros_ws
+cd .\dm_h3510_ros_ws
 .\scripts\windows\deploy_to_board.ps1
 ```
 
@@ -129,7 +129,7 @@ adb shell "DRY_RUN=false bash /home/lckfb/workspace/dm_h3510_ros_ws/scripts/boar
 参数文件：
 
 ```text
-D:\Desktop\rk3576\workspace\dm_h3510_ros_ws\cpp\src\gimbal_tracker\config\gimbal_tracker.yaml
+.\dm_h3510_ros_ws\cpp\src\gimbal_tracker\config\gimbal_tracker.yaml
 ```
 
 常调参数：
@@ -154,7 +154,7 @@ D:\Desktop\rk3576\workspace\dm_h3510_ros_ws\cpp\src\gimbal_tracker\config\gimbal
 修改后重新部署和构建：
 
 ```powershell
-cd D:\Desktop\rk3576\workspace\dm_h3510_ros_ws
+cd .\dm_h3510_ros_ws
 .\scripts\windows\deploy_to_board.ps1
 adb shell "bash /home/lckfb/workspace/dm_h3510_ros_ws/scripts/board/build_cpp_ros.sh"
 ```

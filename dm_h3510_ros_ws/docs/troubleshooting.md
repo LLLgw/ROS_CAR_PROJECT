@@ -194,7 +194,7 @@ velocity_rad_s: 1.2
 改 Windows 源码后，必须执行：
 
 ```powershell
-cd D:\Desktop\rk3576\workspace\dm_h3510_ros_ws
+cd .\dm_h3510_ros_ws
 .\scripts\windows\deploy_to_board.ps1
 adb shell "bash /home/lckfb/workspace/dm_h3510_ros_ws/scripts/board/build_cpp_ros.sh"
 ```

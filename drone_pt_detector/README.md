@@ -35,7 +35,7 @@ drone_pt_detector/
 在 Windows PowerShell 里执行：
 
 ```powershell
-cd D:\Desktop\rk3576\workspace\drone_pt_detector
+cd .\drone_pt_detector
 powershell -ExecutionPolicy Bypass -File .\scripts\setup_env.ps1
 ```
 
@@ -84,7 +84,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source D:\test_vi
 输出目录：
 
 ```text
-D:\Desktop\rk3576\workspace\drone_pt_detector\runs\detect\
+.\runs\detect\
 ```
 
 ## 开源测试数据集
@@ -104,13 +104,13 @@ powershell -ExecutionPolicy Bypass -File .\scripts\download_dataset.ps1 -Limit 5
 下载后直接跑检测：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source D:\Desktop\rk3576\workspace\drone_pt_detector\data\open_datasets\kc34251_drone_detection\images\test -DroneOnly
+powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source .\data\open_datasets\kc34251_drone_detection\images\test -DroneOnly
 ```
 
 用标注文件评估当前 `.pt`：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\validate.ps1 -Data D:\Desktop\rk3576\workspace\drone_pt_detector\data\open_datasets\kc34251_drone_detection\data.yaml -DroneOnly
+powershell -ExecutionPolicy Bypass -File .\scripts\validate.ps1 -Data .\data\open_datasets\kc34251_drone_detection\data.yaml -DroneOnly
 ```
 
 ## 自有 VOC 数据转换
@@ -124,7 +124,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\prepare_drone_voc_dataset.ps1
 转换后的 YOLO 数据集在：
 
 ```text
-D:\Desktop\rk3576\workspace\drone_pt_detector\data\prepared\DroneTrainDataset_yolo
+.\data\prepared\DroneTrainDataset_yolo
 ```
 
 `DroneTrainDataset` 会划分为 `train` 和 `val`，`DroneTestDataset` 会作为 `test`；`DroneTestDataset` 中没有 XML 的 `VS_N*` 图片保留为空标签负样本。
@@ -140,13 +140,13 @@ powershell -ExecutionPolicy Bypass -File .\scripts\train.ps1 -Data D:\datasets\d
 用开源小数据集做连通性测试：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\train.ps1 -Data D:\Desktop\rk3576\workspace\drone_pt_detector\data\open_datasets\kc34251_drone_detection\data.yaml -Epochs 1 -ImgSize 640 -Batch 4
+powershell -ExecutionPolicy Bypass -File .\scripts\train.ps1 -Data .\data\open_datasets\kc34251_drone_detection\data.yaml -Epochs 1 -ImgSize 640 -Batch 4
 ```
 
 训练输出目录：
 
 ```text
-D:\Desktop\rk3576\workspace\drone_pt_detector\runs\train\
+.\runs\train\
 ```
 
 ## DAMO-YOLO UAV 测试
