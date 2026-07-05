@@ -23,7 +23,7 @@ flowchart LR
 当前 workspace 主入口：
 
 ```text
-D:\Desktop\rk3576\workspace
+.
 ```
 
 现有视觉链路：
@@ -84,7 +84,7 @@ gimbal_tracker
 建议放置位置：
 
 ```text
-D:\Desktop\rk3576\workspace\dm_h3510_ros_ws
+.\dm_h3510_ros_ws
 ```
 
 原因：该节点属于云台上层控制逻辑。它不应混入相机或 YOLO 包。
@@ -190,7 +190,7 @@ flowchart TD
 执行：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File D:\Desktop\rk3576\workspace\drone_yolo_web_cpp_ws\scripts\windows\start_drone_yolo_cpp_all.ps1
+powershell -ExecutionPolicy Bypass -File .\drone_yolo_web_cpp_ws\scripts\windows\start_drone_yolo_cpp_all.ps1
 ```
 
 验证摄像头：

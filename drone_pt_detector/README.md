@@ -66,19 +66,19 @@ powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source 0 -Show
 检测视频：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source D:\test_video.mp4
+powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source .\samples\test_video.mp4
 ```
 
 检测图片：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source D:\test.jpg
+powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source .\samples\test.jpg
 ```
 
 只保留无人机类别：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source D:\test_video.mp4 -DroneOnly
+powershell -ExecutionPolicy Bypass -File .\scripts\detect.ps1 -Source .\samples\test_video.mp4 -DroneOnly
 ```
 
 输出目录：
@@ -134,7 +134,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\prepare_drone_voc_dataset.ps1
 训练自定义数据集：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\train.ps1 -Data D:\datasets\drone\data.yaml -Epochs 100 -ImgSize 960 -Batch 8
+powershell -ExecutionPolicy Bypass -File .\scripts\train.ps1 -Data .\data\custom\drone\data.yaml -Epochs 100 -ImgSize 960 -Batch 8
 ```
 
 用开源小数据集做连通性测试：
