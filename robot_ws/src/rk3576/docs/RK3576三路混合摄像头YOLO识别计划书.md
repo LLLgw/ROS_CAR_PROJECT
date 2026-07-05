@@ -232,7 +232,7 @@ sequenceDiagram
 Windows 脚本默认直接访问开发板 IP：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File D:\Desktop\rk3576\workspace\drone_yolo_web_cpp_ws\scripts\windows\start_three_camera_drone_yolo_cpp_all.ps1 `
+powershell -ExecutionPolicy Bypass -File .\drone_yolo_web_cpp_ws\scripts\windows\start_three_camera_drone_yolo_cpp_all.ps1 `
   -HostName 192.168.137.217 `
   -EnabledCameras net_front,net_left,usb_rear `
   -NetFrontRtspUrl "rtsp://<user>:<password>@<camera-a>/stream" `
@@ -264,8 +264,8 @@ drone_yolo_web_cpp_ws/scripts/windows/start_drone_yolo_cpp_all.ps1
 回退命令：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File D:\Desktop\rk3576\workspace\drone_yolo_web_cpp_ws\scripts\windows\stop_three_camera_drone_yolo_cpp_all.ps1
-powershell -ExecutionPolicy Bypass -File D:\Desktop\rk3576\workspace\drone_yolo_web_cpp_ws\scripts\windows\start_drone_yolo_cpp_all.ps1
+powershell -ExecutionPolicy Bypass -File .\drone_yolo_web_cpp_ws\scripts\windows\stop_three_camera_drone_yolo_cpp_all.ps1
+powershell -ExecutionPolicy Bypass -File .\drone_yolo_web_cpp_ws\scripts\windows\start_drone_yolo_cpp_all.ps1
 ```
 
 ## 验证计划
